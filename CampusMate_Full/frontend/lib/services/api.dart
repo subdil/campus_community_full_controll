@@ -5,7 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class Api {
   static const String baseUrl =
-      'https://campusmate-demo-app-szj4.vercel.app/api';
+      'https://campus-community-full-controll.vercel.app/api';
 
   static Future<Map<String, String>> _headers() async {
     final prefs = await SharedPreferences.getInstance();
