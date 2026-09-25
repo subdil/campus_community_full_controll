@@ -1,0 +1,2 @@
+import 'package:flutter/material.dart';
+class AppTheme{static const primary=Color(0xFF5B5FEF);static ThemeData light()=>ThemeData(useMaterial3:true,colorScheme:ColorScheme.fromSeed(seedColor:primary,brightness:Brightness.light),scaffoldBackgroundColor:const Color(0xFFF7F7FC),cardTheme:const CardThemeData(elevation:0,margin:EdgeInsets.zero,shape:RoundedRectangleBorder(borderRadius:BorderRadius.all(Radius.circular(22)))));}

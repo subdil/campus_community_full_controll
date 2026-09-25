@@ -1,1 +1,1 @@
-const router=require('express').Router();const AppConfig=require('../models/AppConfig');router.get('/app-config',async(_,res)=>{let c=await AppConfig.findOne({key:'main'});if(!c)c=await AppConfig.create({});res.json({success:true,config:c})});module.exports=router;
+const router=require('express').Router(); const AppConfig=require('../models/AppConfig'); router.get('/app-config',async(_,res)=>{let c=await AppConfig.findOne({key:'main'});if(!c)c=await AppConfig.create({});res.json({success:true,config:c})}); module.exports=router;

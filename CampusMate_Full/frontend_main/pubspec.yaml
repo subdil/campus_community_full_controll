@@ -1,7 +1,7 @@
 name: campusmate
 description: CampusMate community and campus poster app
 publish_to: "none"
-version: 2.0.0+2
+version: 1.0.0+1
 
 environment:
   sdk: ">=3.5.0 <4.0.0"

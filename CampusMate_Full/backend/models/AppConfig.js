@@ -1,8 +1,1 @@
-const mongoose=require('mongoose');
-const schema=new mongoose.Schema({
- key:{type:String,unique:true,default:'main'},latestVersion:{type:String,default:'1.0.0'},minimumVersion:{type:String,default:'1.0.0'},
- forceUpdate:{type:Boolean,default:false},apkUrl:{type:String,default:''},updateTitle:{type:String,default:'CampusMate update'},
- updateMessage:{type:String,default:'A new version is available.'},homePosterUrl:{type:String,default:''},
- homePosterTitle:{type:String,default:''},homePosterMessage:{type:String,default:''}
-},{timestamps:true});
-module.exports=mongoose.model('AppConfig',schema);
+const mongoose=require('mongoose'); const schema=new mongoose.Schema({key:{type:String,unique:true,default:'main'},latestVersion:{type:String,default:'1.0.0'},minimumVersion:{type:String,default:'1.0.0'},forceUpdate:{type:Boolean,default:false},apkUrl:{type:String,default:''},updateTitle:{type:String,default:'CampusMate update'},updateMessage:{type:String,default:'A new version is available.'},homePosterUrl:{type:String,default:''},homePosterTitle:{type:String,default:''},homePosterMessage:{type:String,default:''}},{timestamps:true}); module.exports=mongoose.model('AppConfig',schema);
