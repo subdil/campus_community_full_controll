@@ -1,0 +1,7 @@
+const mongoose=require('mongoose');
+const schema=new mongoose.Schema({
+ author:{type:mongoose.Schema.Types.ObjectId,ref:'User',required:true},text:{type:String,default:''},
+ imageUrl:{type:String,default:''},community:{type:mongoose.Schema.Types.ObjectId,ref:'Community',default:null},
+ active:{type:Boolean,default:true}
+},{timestamps:true});
+module.exports=mongoose.model('Post',schema);

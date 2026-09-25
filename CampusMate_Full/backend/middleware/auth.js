@@ -1,0 +1,3 @@
+const jwt=require('jsonwebtoken'); const User=require('../models/User');
+module.exports=async(req,res,next)=>{try{const h=req.headers.authorization||'';const token=h.startsWith('Bearer ')?h.slice(7):null;if(!token)return res.status(401).json({success:false,message:'Authentication required'});const p=jwt.verify(token,process.env.JWT_SECRET);const u=await User.findById(p.id);if(!u||!u.active)return res.status(401).json({success:false,message:'Account unavailable'});req.user=u;next()}catch(e){res.status(401).json({success:false,message:'Invalid or expired token'})}};
+module.exports.admin=(req,res,next)=>req.user?.role==='admin'?next():res.status(403).json({success:false,message:'Admin access required'});
