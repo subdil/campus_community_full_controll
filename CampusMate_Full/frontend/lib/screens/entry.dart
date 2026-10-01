@@ -86,7 +86,7 @@ class Entry extends StatelessWidget {
           borderRadius: BorderRadius.circular(26),
           color: dark ? const Color(0xFF17172A) : Colors.white,
           boxShadow: [
-            BoxShadow(color: Colors.black.withOpacity(.06), blurRadius: 22, offset: const Offset(0, 8)),
+            BoxShadow(color: Colors.black.withValues(alpha: .06), blurRadius: 22, offset: const Offset(0, 8)),
           ],
         ),
         child: Row(

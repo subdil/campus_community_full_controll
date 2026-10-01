@@ -77,7 +77,7 @@ class _AdminHomeState extends State<AdminHome> {
           ],
         ),
       ),
-      body: Admin(user: widget.user, section: index),
+      body: Admin(key: ValueKey(index), user: widget.user, section: index),
     );
   }
 }
